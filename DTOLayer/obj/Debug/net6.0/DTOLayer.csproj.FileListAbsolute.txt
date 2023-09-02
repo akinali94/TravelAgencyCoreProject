@@ -1,0 +1,12 @@
+C:\Users\sabit\OneDrive\Masaüstü\Aliakin\TraversalCoreProject\DTOLayer\bin\Debug\net6.0\DTOLayer.deps.json
+C:\Users\sabit\OneDrive\Masaüstü\Aliakin\TraversalCoreProject\DTOLayer\bin\Debug\net6.0\DTOLayer.dll
+C:\Users\sabit\OneDrive\Masaüstü\Aliakin\TraversalCoreProject\DTOLayer\bin\Debug\net6.0\DTOLayer.pdb
+C:\Users\sabit\OneDrive\Masaüstü\Aliakin\TraversalCoreProject\DTOLayer\obj\Debug\net6.0\DTOLayer.csproj.AssemblyReference.cache
+C:\Users\sabit\OneDrive\Masaüstü\Aliakin\TraversalCoreProject\DTOLayer\obj\Debug\net6.0\DTOLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sabit\OneDrive\Masaüstü\Aliakin\TraversalCoreProject\DTOLayer\obj\Debug\net6.0\DTOLayer.AssemblyInfoInputs.cache
+C:\Users\sabit\OneDrive\Masaüstü\Aliakin\TraversalCoreProject\DTOLayer\obj\Debug\net6.0\DTOLayer.AssemblyInfo.cs
+C:\Users\sabit\OneDrive\Masaüstü\Aliakin\TraversalCoreProject\DTOLayer\obj\Debug\net6.0\DTOLayer.csproj.CoreCompileInputs.cache
+C:\Users\sabit\OneDrive\Masaüstü\Aliakin\TraversalCoreProject\DTOLayer\obj\Debug\net6.0\DTOLayer.dll
+C:\Users\sabit\OneDrive\Masaüstü\Aliakin\TraversalCoreProject\DTOLayer\obj\Debug\net6.0\refint\DTOLayer.dll
+C:\Users\sabit\OneDrive\Masaüstü\Aliakin\TraversalCoreProject\DTOLayer\obj\Debug\net6.0\DTOLayer.pdb
+C:\Users\sabit\OneDrive\Masaüstü\Aliakin\TraversalCoreProject\DTOLayer\obj\Debug\net6.0\ref\DTOLayer.dll
