@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sabit\\OneDrive\\Masaüstü\\Aliakin\\TraversalCoreProject\\DTOLayer\\DTOLayer.csproj": {}
+    "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\DTOLayer\\DTOLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sabit\\OneDrive\\Masaüstü\\Aliakin\\TraversalCoreProject\\DTOLayer\\DTOLayer.csproj": {
+    "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\DTOLayer\\DTOLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sabit\\OneDrive\\Masaüstü\\Aliakin\\TraversalCoreProject\\DTOLayer\\DTOLayer.csproj",
+        "projectUniqueName": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\DTOLayer\\DTOLayer.csproj",
         "projectName": "DTOLayer",
-        "projectPath": "C:\\Users\\sabit\\OneDrive\\Masaüstü\\Aliakin\\TraversalCoreProject\\DTOLayer\\DTOLayer.csproj",
-        "packagesPath": "C:\\Users\\sabit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sabit\\OneDrive\\Masaüstü\\Aliakin\\TraversalCoreProject\\DTOLayer\\obj\\",
+        "projectPath": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\DTOLayer\\DTOLayer.csproj",
+        "packagesPath": "C:\\Users\\aliakin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\DTOLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\sabit\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\aliakin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

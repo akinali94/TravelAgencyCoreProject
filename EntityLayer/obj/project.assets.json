@@ -3918,24 +3918,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sabit\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\aliakin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sabit\\OneDrive\\Masaüstü\\Aliakin\\TraversalCoreProject\\EntityLayer\\EntityLayer.csproj",
+      "projectUniqueName": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\EntityLayer\\EntityLayer.csproj",
       "projectName": "EntityLayer",
-      "projectPath": "C:\\Users\\sabit\\OneDrive\\Masaüstü\\Aliakin\\TraversalCoreProject\\EntityLayer\\EntityLayer.csproj",
-      "packagesPath": "C:\\Users\\sabit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sabit\\OneDrive\\Masaüstü\\Aliakin\\TraversalCoreProject\\EntityLayer\\obj\\",
+      "projectPath": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\EntityLayer\\EntityLayer.csproj",
+      "packagesPath": "C:\\Users\\aliakin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\EntityLayer\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\sabit\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\aliakin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4006,7 +4001,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

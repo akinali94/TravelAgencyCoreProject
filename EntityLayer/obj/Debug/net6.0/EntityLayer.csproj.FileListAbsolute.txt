@@ -26,3 +26,17 @@ C:\Users\sabit\OneDrive\Masaüstü\Aliakin\TraversalCoreProject\EntityLayer\obj\
 C:\Users\sabit\OneDrive\Masaüstü\Aliakin\TraversalCoreProject\EntityLayer\obj\Debug\net6.0\EntityLayer.pdb
 C:\Users\sabit\OneDrive\Masaüstü\Aliakin\TraversalCoreProject\EntityLayer\obj\Debug\net6.0\EntityLayer.genruntimeconfig.cache
 C:\Users\sabit\OneDrive\Masaüstü\Aliakin\TraversalCoreProject\EntityLayer\obj\Debug\net6.0\ref\EntityLayer.dll
+C:\Users\aliakin\Dosyalarim\Projects\TraversalCoreProject\EntityLayer\bin\Debug\net6.0\EntityLayer.deps.json
+C:\Users\aliakin\Dosyalarim\Projects\TraversalCoreProject\EntityLayer\bin\Debug\net6.0\EntityLayer.runtimeconfig.json
+C:\Users\aliakin\Dosyalarim\Projects\TraversalCoreProject\EntityLayer\bin\Debug\net6.0\EntityLayer.dll
+C:\Users\aliakin\Dosyalarim\Projects\TraversalCoreProject\EntityLayer\bin\Debug\net6.0\EntityLayer.pdb
+C:\Users\aliakin\Dosyalarim\Projects\TraversalCoreProject\EntityLayer\obj\Debug\net6.0\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\aliakin\Dosyalarim\Projects\TraversalCoreProject\EntityLayer\obj\Debug\net6.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aliakin\Dosyalarim\Projects\TraversalCoreProject\EntityLayer\obj\Debug\net6.0\EntityLayer.AssemblyInfoInputs.cache
+C:\Users\aliakin\Dosyalarim\Projects\TraversalCoreProject\EntityLayer\obj\Debug\net6.0\EntityLayer.AssemblyInfo.cs
+C:\Users\aliakin\Dosyalarim\Projects\TraversalCoreProject\EntityLayer\obj\Debug\net6.0\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\aliakin\Dosyalarim\Projects\TraversalCoreProject\EntityLayer\obj\Debug\net6.0\EntityLayer.dll
+C:\Users\aliakin\Dosyalarim\Projects\TraversalCoreProject\EntityLayer\obj\Debug\net6.0\refint\EntityLayer.dll
+C:\Users\aliakin\Dosyalarim\Projects\TraversalCoreProject\EntityLayer\obj\Debug\net6.0\EntityLayer.pdb
+C:\Users\aliakin\Dosyalarim\Projects\TraversalCoreProject\EntityLayer\obj\Debug\net6.0\EntityLayer.genruntimeconfig.cache
+C:\Users\aliakin\Dosyalarim\Projects\TraversalCoreProject\EntityLayer\obj\Debug\net6.0\ref\EntityLayer.dll

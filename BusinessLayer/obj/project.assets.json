@@ -4502,24 +4502,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sabit\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\aliakin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sabit\\OneDrive\\Masaüstü\\Aliakin\\TraversalCoreProject\\BusinessLayer\\BusinessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\BusinessLayer\\BusinessLayer.csproj",
       "projectName": "BusinessLayer",
-      "projectPath": "C:\\Users\\sabit\\OneDrive\\Masaüstü\\Aliakin\\TraversalCoreProject\\BusinessLayer\\BusinessLayer.csproj",
-      "packagesPath": "C:\\Users\\sabit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sabit\\OneDrive\\Masaüstü\\Aliakin\\TraversalCoreProject\\BusinessLayer\\obj\\",
+      "projectPath": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\BusinessLayer\\BusinessLayer.csproj",
+      "packagesPath": "C:\\Users\\aliakin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\BusinessLayer\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\sabit\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\aliakin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4533,14 +4528,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\sabit\\OneDrive\\Masaüstü\\Aliakin\\TraversalCoreProject\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "C:\\Users\\sabit\\OneDrive\\Masaüstü\\Aliakin\\TraversalCoreProject\\DataAccessLayer\\DataAccessLayer.csproj"
+            "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\DataAccessLayer\\DataAccessLayer.csproj"
             },
-            "C:\\Users\\sabit\\OneDrive\\Masaüstü\\Aliakin\\TraversalCoreProject\\DTOLayer\\DTOLayer.csproj": {
-              "projectPath": "C:\\Users\\sabit\\OneDrive\\Masaüstü\\Aliakin\\TraversalCoreProject\\DTOLayer\\DTOLayer.csproj"
+            "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\DTOLayer\\DTOLayer.csproj": {
+              "projectPath": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\DTOLayer\\DTOLayer.csproj"
             },
-            "C:\\Users\\sabit\\OneDrive\\Masaüstü\\Aliakin\\TraversalCoreProject\\EntityLayer\\EntityLayer.csproj": {
-              "projectPath": "C:\\Users\\sabit\\OneDrive\\Masaüstü\\Aliakin\\TraversalCoreProject\\EntityLayer\\EntityLayer.csproj"
+            "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\EntityLayer\\EntityLayer.csproj": {
+              "projectPath": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\EntityLayer\\EntityLayer.csproj"
             }
           }
         }
@@ -4604,7 +4599,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

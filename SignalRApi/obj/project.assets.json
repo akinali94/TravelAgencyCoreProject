@@ -3937,24 +3937,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sabit\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\aliakin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sabit\\OneDrive\\Masaüstü\\Aliakin\\TraversalCoreProject\\SignalRApi\\SignalRApi.csproj",
+      "projectUniqueName": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\SignalRApi\\SignalRApi.csproj",
       "projectName": "SignalRApi",
-      "projectPath": "C:\\Users\\sabit\\OneDrive\\Masaüstü\\Aliakin\\TraversalCoreProject\\SignalRApi\\SignalRApi.csproj",
-      "packagesPath": "C:\\Users\\sabit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sabit\\OneDrive\\Masaüstü\\Aliakin\\TraversalCoreProject\\SignalRApi\\obj\\",
+      "projectPath": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\SignalRApi\\SignalRApi.csproj",
+      "packagesPath": "C:\\Users\\aliakin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\SignalRApi\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\sabit\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\aliakin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3962,7 +3957,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4025,7 +4019,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
