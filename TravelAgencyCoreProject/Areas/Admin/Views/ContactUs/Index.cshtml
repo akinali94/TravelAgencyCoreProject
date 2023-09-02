@@ -1,0 +1,33 @@
+﻿@using TravelAgencyCoreProject.Models
+@model List<ContactUs>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+
+<h1>Messages from Contact Us</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Sender</th>
+        <th>Topic</th>
+        <th>Date</th>
+        <th>Delete</th>
+        <th>Open the Meessage</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <th>@count</th>
+            <td>@item.Name</td>
+            <td>@item.Subject</td>
+            <td>@item.MessageDate.ToString("dd.MMM.yyyy")</td>
+            <td><a href="#" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="#" class="btn btn-outline-dark">Mesajı Aç</a></td>
+        </tr>
+    }
+</table>

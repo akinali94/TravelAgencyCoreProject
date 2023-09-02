@@ -1,0 +1,37 @@
+﻿@model TravelAgencyCoreProject.Areas.Member.Models.UserEditViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<h1>Profile Management Page</h1>
+<form method="post" enctype="multipart/form-data">
+    @Html.Label("Name: ")
+    <input type="text" asp-for="name" class="form-control"/>
+    <br/>
+    @Html.Label("Surname: ")
+    <input type="text" asp-for="surname" class="form-control" />
+    <br />
+    @Html.Label("Password: ")
+    <input type="password" asp-for="password" class="form-control" />
+    <br />
+    @Html.Label("Confirm Password: ")
+    <input type="password" asp-for="confirmpassword" class="form-control" />
+    <br />
+    @Html.Label("Phone Number: ")
+    <input type="text" asp-for="phonenumber" class="form-control" />
+    <br />
+    @Html.Label("Mail: ")
+    <input type="text" asp-for="mail" class="form-control" />
+    <br />
+    <div class="form-group">
+        <label>Choose an Image</label>
+        <input type="file" asp-for="image" />
+    </div>
+    <br/>
+    <button class="btn btn-primary">Update your Info</button>
+   
+</form>
+
+

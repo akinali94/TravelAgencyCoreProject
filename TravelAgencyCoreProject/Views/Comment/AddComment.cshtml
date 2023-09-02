@@ -1,0 +1,24 @@
+﻿﻿@if (User.Identity.IsAuthenticated)
+{
+    <div class="leave-comment-form mt-5" id="reply">
+        <h4 class="side-title mb-2">Leave a Comment</h4>
+        <p class="mb-4">
+            * Should fill required areas
+        </p>
+        <form method="post" asp-action="AddComment" asp-controller="Comment">
+            <input type="hidden" name="DestinationID" value="@ViewBag.destID" />
+            <input type="hidden" name="AppUserID" value="@ViewBag.userId" />
+            <div class="form-group">
+                <textarea name="CommentContent" class="form-control" placeholder="Your Comment*" required=""
+                          spellcheck="false"></textarea>
+            </div>
+            <div class="submit text-right">
+                <button class="btn btn-style btn-primary" type="submit" id="btnsave">Leave your Comment</button>
+            </div>
+        </form>
+    </div>
+}
+else
+{
+    <h2>Sign in to leave a comment!</h2>
+}

@@ -1,0 +1,35 @@
+﻿@model List<Reservation>
+@{
+    ViewData["Title"] = "MyApprovalReservation";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<h1>MyApprovalReservation</h1>
+
+@if (!Model.Any())
+{
+    <span>There is no active or previous reservation</span>
+}
+else
+{
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Destination</th>
+            <th>Number of People</th>
+            <th>Reservation Date</th>
+            <th>Status</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ReservationID</td>
+                <td>@item.Destination.City</td>
+                <td>@item.NumberofPeople</td>
+                <td>@item.ReservationDate</td>
+                <td>@item.Status</td>
+            </tr>
+        }
+    </table>
+}
+

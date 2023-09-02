@@ -1,0 +1,23 @@
+﻿@using TravelAgencyCoreProject.CQRS.Results.DestinationResults
+@model GetDestinationQueryByIdResult
+
+@{
+    ViewData["Title"] = "GetDestination";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Destination Edit Page - CQRS</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="DestinationID" />
+    <label>City</label>
+    <input type="text" asp-for="City" class="form-control" />
+    <br />
+    <label>Days&Nights</label>
+    <input type="text" asp-for="DayNight" class="form-control" />
+    <br />
+    <label>Price</label>
+    <input type="text" asp-for="Price" class="form-control" />
+    <br />
+    <button class="btn btn-outline-success">Update Destination</button>
+</form>

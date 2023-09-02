@@ -1,0 +1,26 @@
+﻿@using TravelAgencyCoreProject.CQRS.Commands.DestinationCommands
+@model CreateDestinationCommand
+
+
+@{
+    ViewData["Title"] = "AddDestination";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Add new Destination (CQRS)</h2>
+
+<form method="post">
+    <label>City</label>
+    <input type="text" asp-for="City" class="form-control" />
+    <br />
+    <label>Day&Night</label>
+    <input type="text" asp-for="DayNight" class="form-control" />
+    <br />
+    <label>Price</label>
+    <input type="text" asp-for="Price" class="form-control" />
+    <br />
+    <label>Capacity</label>
+    <input type="text" asp-for="Capacity" class="form-control" />
+    <br />
+    <button class="btn btn-outline-primary">Add Destination</button>
+</form>

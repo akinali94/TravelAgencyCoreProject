@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="zxx">
+
+    @await Html.PartialAsync("~/Views/LayoutPartial/_HeaderPartial.cshtml")
+
+<body>
+
+    @await Html.PartialAsync("~/Views/LayoutPartial/_NavbarPartial.cshtml")
+
+    
+    @RenderBody()
+
+    @await Html.PartialAsync("~/Views/LayoutPartial/_FooterPartial.cshtml")
+    
+    @await Html.PartialAsync("~/Views/LayoutPartial/_ScriptPartial.cshtml")
+</body>
+
+</html>
+

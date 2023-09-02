@@ -1,0 +1,30 @@
+﻿@using TravelAgencyCoreProject.Areas.Admin.Models
+@model VisitorViewModel
+@{
+    ViewData["Title"] = "UpdateVisitor";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Update Visitor with API</h1>
+<br />
+<form method="post">
+
+    <input type="hidden" asp-for="VisitorID" />
+
+    <label>Visitor Name</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <br />
+    <label>Visitor Surname</label>
+    <input type="text" class="form-control" asp-for="Surname" />
+    <br />
+    <label>Visitor Mail Address</label>
+    <input type="text" class="form-control" asp-for="Mail" />
+    <br />
+    <label>Visitor City</label>
+    <input type="text" class="form-control" asp-for="City" />
+    <br />
+    <label>Visitor Country</label>
+    <input type="text" class="form-control" asp-for="Country" />
+    <br />
+    <button class="btn btn-outline-success">Update Visitor</button>
+</form>

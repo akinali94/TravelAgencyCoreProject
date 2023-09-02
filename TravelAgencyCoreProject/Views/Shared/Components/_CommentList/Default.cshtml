@@ -1,0 +1,34 @@
+﻿@using EntityLayer.Concrete
+@model List<Comment>
+<div class="comments mt-5">
+    @foreach(var item in Model)
+    {
+        
+    
+        <h4 class="side-title ">Comments (@ViewBag.commentCount)</h4>
+    <div class="media mt-4">
+        <div class="img-circle">
+            <img src="~/Traversal-Liberty/assets/images/c1.jpg" class="img-fluid" alt="...">
+        </div>
+        <div class="media-body">
+
+            <ul class="time-rply mb-2">
+                <li>
+                        <a href="#URL" class="name mt-0 mb-2 d-block">@item.AppUser.Name @item.AppUser.Surname</a>
+                    @(((DateTime)item.CommentTime).ToString("dd-MMM-yyyy"))
+
+                </li>
+                <li class="reply-last">
+                    <a href="#reply" class="reply">
+                        Reply
+                    </a>
+                </li>
+            </ul>
+            <p>
+                @item.CommentContent
+            </p>
+        </div>
+    </div>
+    }
+</div>
+

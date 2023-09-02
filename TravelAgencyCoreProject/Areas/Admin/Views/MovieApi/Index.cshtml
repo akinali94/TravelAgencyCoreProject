@@ -1,0 +1,32 @@
+﻿@using TravelAgencyCoreProject.Areas.Admin.Models
+@model List<ApiMovieViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Api IMDB Top 100 Film List</h1>
+
+<br />
+
+<table class="table table-striped">
+    <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Imdb Score</th>
+        <th>Year</th>
+        <th>Trailer</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.rank</th>
+            <td>@item.title</td>
+            <td>@item.rating</td>
+            <td>@item.year</td>
+            <td><a href="#" class="btn btn-outline-dark">Trailer</a></td>
+        </tr>
+    }
+</table>
+
