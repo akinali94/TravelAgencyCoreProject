@@ -280,6 +280,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/aliakin/Dosyalarim/Projects/TraversalCoreProject/TravelAgencyCoreProject/Views/Language/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZ3VhZ2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/aliakin/Dosyalarim/Projects/TraversalCoreProject/TravelAgencyCoreProject/Views/LayoutPartial/_FooterPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGF5b3V0UGFydGlhbFxfRm9vdGVyUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -350,6 +354,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/aliakin/Dosyalarim/Projects/TraversalCoreProject/TravelAgencyCoreProject/Views/Shared/Components/_GuideList/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0d1aWRlTGlzdFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliakin/Dosyalarim/Projects/TraversalCoreProject/TravelAgencyCoreProject/Views/Shared/Components/_LastDestinations/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0xhc3REZXN0aW5hdGlvbnNcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliakin/Dosyalarim/Projects/TraversalCoreProject/TravelAgencyCoreProject/Views/Shared/Components/_MemberLayoutLanguages/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX01lbWJlckxheW91dExhbmd1YWdlc1xEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/aliakin/Dosyalarim/Projects/TraversalCoreProject/TravelAgencyCoreProject/Views/Shared/Components/_PlatformSetting/Default.cshtml]

@@ -13,6 +13,7 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Serilog;
@@ -58,6 +59,13 @@ builder.Services.AddIdentity<AppUser, AppRole>(options =>
 }).AddEntityFrameworkStores<Context>().AddErrorDescriber<CustomIdentityValidator>().AddTokenProvider<DataProtectorTokenProvider<AppUser>>(TokenOptions.DefaultProvider);
 
 builder.Services.AddRazorPages();
+
+builder.Services.AddLocalization(opt =>
+{
+	opt.ResourcesPath = "Resources";
+});
+
+builder.Services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix).AddDataAnnotationsLocalization();
 
 
 
@@ -167,6 +175,9 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Login}/{action=SignUp}/{id?}");
 
+var supportedCultures = new[] { "en", "fr", "de", "tr" };
+var localizationOptions = new RequestLocalizationOptions().SetDefaultCulture(supportedCultures[0]).AddSupportedCultures(supportedCultures).AddSupportedUICultures(supportedCultures);
+app.UseRequestLocalization(localizationOptions);
 
 app.UseEndpoints(endpoints =>
 {

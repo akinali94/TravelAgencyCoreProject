@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wdRVY2gQ2GTI9xH1SmYOntyLgpXlSB9J9KGmGrreWSg=",
+  "Hash": "7EANzU5WbcwOa+Siw7SYGI9dCVAAqAs8sBJFJSHP3Hs=",
   "Source": "TravelAgencyCoreProject",
   "BasePath": "_content/TravelAgencyCoreProject",
   "Mode": "Default",
@@ -15162,6 +15162,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Traversal-Starter\\starter-license-W3Layouts.txt"
+    },
+    {
+      "Identity": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\TravelAgencyCoreProject\\wwwroot\\userimages\\5bebfb54-69cd-4af7-b632-223be882f826.jpg",
+      "SourceId": "TravelAgencyCoreProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\TravelAgencyCoreProject\\wwwroot\\",
+      "BasePath": "_content/TravelAgencyCoreProject",
+      "RelativePath": "userimages/5bebfb54-69cd-4af7-b632-223be882f826.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\userimages\\5bebfb54-69cd-4af7-b632-223be882f826.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\TravelAgencyCoreProject\\wwwroot\\userimages\\e425f7fb-46ec-49c6-a862-a570cc7e71fe.jpg",
+      "SourceId": "TravelAgencyCoreProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\TravelAgencyCoreProject\\wwwroot\\",
+      "BasePath": "_content/TravelAgencyCoreProject",
+      "RelativePath": "userimages/e425f7fb-46ec-49c6-a862-a570cc7e71fe.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\userimages\\e425f7fb-46ec-49c6-a862-a570cc7e71fe.jpg"
     },
     {
       "Identity": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\TravelAgencyCoreProject\\wwwroot\\web\\css\\style.css",

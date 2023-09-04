@@ -3321,6 +3321,14 @@
       "PackagePath": "staticwebassets\\soft-ui-dashboard\\pages\\virtual-reality.html"
     },
     {
+      "Id": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\TravelAgencyCoreProject\\wwwroot\\userimages\\5bebfb54-69cd-4af7-b632-223be882f826.jpg",
+      "PackagePath": "staticwebassets\\userimages\\5bebfb54-69cd-4af7-b632-223be882f826.jpg"
+    },
+    {
+      "Id": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\TravelAgencyCoreProject\\wwwroot\\userimages\\e425f7fb-46ec-49c6-a862-a570cc7e71fe.jpg",
+      "PackagePath": "staticwebassets\\userimages\\e425f7fb-46ec-49c6-a862-a570cc7e71fe.jpg"
+    },
+    {
       "Id": "C:\\Users\\aliakin\\Dosyalarim\\Projects\\TraversalCoreProject\\TravelAgencyCoreProject\\wwwroot\\web\\css\\style.css",
       "PackagePath": "staticwebassets\\web\\css\\style.css"
     },

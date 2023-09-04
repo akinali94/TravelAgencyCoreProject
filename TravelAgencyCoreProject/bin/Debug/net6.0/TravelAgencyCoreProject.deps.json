@@ -31,6 +31,20 @@
         },
         "runtime": {
           "TravelAgencyCoreProject.dll": {}
+        },
+        "resources": {
+          "de/TravelAgencyCoreProject.resources.dll": {
+            "locale": "de"
+          },
+          "en/TravelAgencyCoreProject.resources.dll": {
+            "locale": "en"
+          },
+          "fr/TravelAgencyCoreProject.resources.dll": {
+            "locale": "fr"
+          },
+          "tr/TravelAgencyCoreProject.resources.dll": {
+            "locale": "tr"
+          }
         }
       },
       "AutoMapper/12.0.1": {
