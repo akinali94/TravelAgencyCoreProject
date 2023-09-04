@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SignalRApi",
+    "\\SignalRApi\\Model",
+    "\\SignalRConsume",
+    "\\SignalRConsume\\Views",
+    "\\SignalRConsume\\Views\\Home",
+    "\\TravelAgencyCoreProject"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\SignalRApi\\Model\\VisitorService.cs",
   "PreviewInSolutionExplorer": false
 }

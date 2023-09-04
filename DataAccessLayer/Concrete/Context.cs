@@ -23,7 +23,7 @@ namespace DataAccessLayer.Concrete
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=SABITENGIN;Database=TravelAgencyDB;Trusted_Connection=True; encrypt=false");
+            optionsBuilder.UseSqlServer("Server=ALIAKIN5143;Database=TravelAgencyDB;Trusted_Connection=True; encrypt=false");
             base.OnConfiguring(optionsBuilder);
         }
 
