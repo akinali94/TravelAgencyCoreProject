@@ -1,0 +1,43 @@
+﻿@using EntityLayer.Concrete
+@model List<Destination>
+
+
+@{
+    ViewData["Title"] = "SearchCitiesByName";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+
+
+<h1>Search Destination</h1>
+
+<form asp-action="SearchCitiesByName" method="get" asp-area="Member">
+    <div>
+        <p>
+            Enter your Destination: <input type="text" name="searchString" class="form-control" value="@ViewData["CurrentFilter"]" />
+            <input type="submit" value="Search" class="btn btn-outline-dark" />
+        </p>
+    </div>
+</form>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>City</th>
+        <th>Days&Nights</th>
+        <th>Capacity</th>
+        <th>Price</th>
+        <th>Details</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.DestinationID</td>
+            <td>@item.City</td>
+            <td>@item.DayNight></td>
+            <td>@item.Capacity</td>
+            <td>@item.Price</td>
+            <td><a href="#" class="btn btn-outline-info">Details</a></td>
+        </tr>
+    }
+</table>

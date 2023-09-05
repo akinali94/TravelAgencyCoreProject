@@ -2,6 +2,7 @@
 using DocumentFormat.OpenXml.Spreadsheet;
 using EntityLayer.Concrete;
 using MailKit.Net.Smtp;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MimeKit;
@@ -9,6 +10,7 @@ using TravelAgencyCoreProject.Models;
 
 namespace TravelAgencyCoreProject.Controllers
 {
+    [AllowAnonymous]
     public class PasswordChangeController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
@@ -25,10 +27,10 @@ namespace TravelAgencyCoreProject.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> ForgetPassword(ForgetPasswordViewModel forget)
+        public async Task<IActionResult> ForgetPassword(ForgetPasswordViewModel forgetVM)
         {
-            var user = await _userManager.FindByEmailAsync(forget.Email);
-            string passwordResetToken = await _userManager.GeneratePasswordResetTokenAsync( user);
+            var user = await _userManager.FindByEmailAsync(forgetVM.Email);
+            string passwordResetToken = await _userManager.GeneratePasswordResetTokenAsync(user);
             var passwordResetTokenLink = Url.Action("ResetPassword", "PasswordChange",new
             {
                userId = user.Id,
@@ -47,7 +49,7 @@ namespace TravelAgencyCoreProject.Controllers
             mimeMessage.From.Add(mailboxAddressFrom);
 
             //Mail To
-            MailboxAddress mailboxAddressTo = new MailboxAddress("User", forget.Email);
+            MailboxAddress mailboxAddressTo = new MailboxAddress("User", forgetVM.Email);
             mimeMessage.To.Add(mailboxAddressTo);
 
             //Body
@@ -78,7 +80,7 @@ namespace TravelAgencyCoreProject.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel reset)
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel resetVM)
         {
             var userid = TempData["userid"];
             var token = TempData["token"];
@@ -87,7 +89,7 @@ namespace TravelAgencyCoreProject.Controllers
                 //hata mesajı
             }
             var user = await _userManager.FindByIdAsync(userid.ToString());
-            var result = await _userManager.ResetPasswordAsync(user, token.ToString(), reset.Password);
+            var result = await _userManager.ResetPasswordAsync(user, token.ToString(), resetVM.Password);
             if (result.Succeeded)
             {
                 return RedirectToAction("SignIn", "Login");

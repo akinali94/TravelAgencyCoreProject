@@ -135,6 +135,9 @@
   <data name="Previous Reservations" xml:space="preserve">
     <value>Frühere Reservierungen</value>
   </data>
+  <data name="Search" xml:space="preserve">
+    <value>Suchen</value>
+  </data>
   <data name="Your Profile" xml:space="preserve">
     <value>Dein Profil</value>
   </data>

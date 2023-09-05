@@ -192,6 +192,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXERlc3RpbmF0aW9uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/aliakin/Dosyalarim/Projects/TraversalCoreProject/TravelAgencyCoreProject/Areas/Member/Views/Destination/SearchCitiesByName.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXERlc3RpbmF0aW9uXFNlYXJjaENpdGllc0J5TmFtZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/aliakin/Dosyalarim/Projects/TraversalCoreProject/TravelAgencyCoreProject/Areas/Member/Views/MemberLayoutPartial/_FooterPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXE1lbWJlckxheW91dFBhcnRpYWxcX0Zvb3RlclBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -310,6 +314,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/aliakin/Dosyalarim/Projects/TraversalCoreProject/TravelAgencyCoreProject/Views/PasswordChange/ForgetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzc3dvcmRDaGFuZ2VcRm9yZ2V0UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliakin/Dosyalarim/Projects/TraversalCoreProject/TravelAgencyCoreProject/Views/PasswordChange/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzc3dvcmRDaGFuZ2VcUmVzZXRQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/aliakin/Dosyalarim/Projects/TraversalCoreProject/TravelAgencyCoreProject/Views/Shared/Components/_AdminDashboardHeader/Default.cshtml]

@@ -135,6 +135,9 @@
   <data name="Previous Reservations" xml:space="preserve">
     <value>Geçmiş Rezervasyonlar</value>
   </data>
+  <data name="Search" xml:space="preserve">
+    <value>Ara</value>
+  </data>
   <data name="Your Profile" xml:space="preserve">
     <value>Profilim</value>
   </data>
