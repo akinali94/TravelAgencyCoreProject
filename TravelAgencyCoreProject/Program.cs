@@ -173,7 +173,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Login}/{action=SignUp}/{id?}");
+    pattern: "{controller=Default}/{action=Index}/{id?}");
 
 var supportedCultures = new[] { "en", "fr", "de", "tr" };
 var localizationOptions = new RequestLocalizationOptions().SetDefaultCulture(supportedCultures[0]).AddSupportedCultures(supportedCultures).AddSupportedUICultures(supportedCultures);

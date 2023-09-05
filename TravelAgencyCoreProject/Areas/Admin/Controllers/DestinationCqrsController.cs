@@ -7,7 +7,7 @@ using TravelAgencyCoreProject.CQRS.Queries.DestinationQueries;
 namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [AllowAnonymous]
+    [Authorize(Roles = "Admin")]
     public class DestinationCqrsController : Controller
     {
         private readonly GetAllDestinationQueryHandler _getAllDestinationQueryHandler;

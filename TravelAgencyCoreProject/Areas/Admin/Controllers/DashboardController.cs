@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [AllowAnonymous]
+    [Authorize(Roles = "Admin")]
     public class DashboardController : Controller
     {
         public IActionResult Index()

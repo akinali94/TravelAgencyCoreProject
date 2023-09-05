@@ -5,7 +5,7 @@ namespace TravelAgencyCoreProject.Areas.Member.Controllers
 {
 
     [Area("Member")]
-    [AllowAnonymous]
+    [Authorize(Roles = "Admin, Member")]
     public class CommentController : Controller
     {
         public IActionResult Index()

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [AllowAnonymous]
+    [Authorize(Roles = "Admin")]
     public class CommentController : Controller
     {
         //CommentManager commentManager = new CommentManager(new EfCommentDal());

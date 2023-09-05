@@ -1,10 +1,12 @@
 ﻿using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace TravelAgencyCoreProject.Areas.Member.Controllers
 {
     [Area("Member")]
+    [Authorize(Roles = "Admin, Member")]
     public class DashboardController : Controller
     {
         private readonly UserManager<AppUser> _userManager;

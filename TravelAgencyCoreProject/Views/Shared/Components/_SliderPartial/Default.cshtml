@@ -1,4 +1,6 @@
-﻿<section class="w3l-main-slider" id="home">
+﻿@model List<Destination>
+
+<section class="w3l-main-slider" id="home">
     <div class="banner-content">
         <div id="demo-1"
              data-zs-src='["/Traversal-Starter/assets/images/banner1.jpg", "/Traversal-Starter/assets/images/banner2.jpg","/Traversal-Starter/assets/images/banner3.jpg", "/Traversal-Starter/assets/images/banner4.jpg"]'
@@ -9,32 +11,29 @@
                         <h3>Best Travel Experience</h3>
                         <h6 class="mb-3">Discover your next adventure</h6>
                         <div class="flex-wrap search-wthree-field mt-md-5 mt-4">
-                            <form action="#" method="post" class="booking-form">
-                                <div class="row book-form">
-                                    <div class="form-input col-md-4 mt-md-0 mt-3">
+                            <form id="destinationForm" action="Index" method="post" class="booking-form">
+                                <input type="hidden" id="selectedValue" name="selectedValue" value="">
+                                    <div class="row book-form">
+                                        <div class="form-input col-md-4 mt-md-0 mt-3">
+                                        <select name="selectpicker" id="selectpicker" class="selectpicker" onchange="updateSelectedValue()">
 
-                                        <select name="selectpicker" class="selectpicker">
-                                            <option value="">Destination</option>
-                                            <option value="africa">Africa</option>
-                                            <option value="america">America</option>
-                                            <option value="asia">Asia</option>
-                                            <option value="eastern-europe">Eastern Europe</option>
-                                            <option value="europe">Europe</option>
-                                            <option value="south-america">South America</option>
-                                        </select>
+                                                <option selected = "true" disabled="disabled">Destination</option>
+                                                @foreach(var item in Model)
+                                                {
+                                                    
+                                                    <option value="@item.DestinationID">@item.City</option>
+                                                }        
+                                            </select>
 
+                                        </div>
+                                       
+                                        <div class="bottom-btn col-md-4 mt-md-0 mt-3">
+                                            <button class="btn btn-style btn-secondary">
+                                                <span class="fa fa-search mr-3"
+                                                      aria-hidden="true"></span> Search
+                                            </button>
+                                        </div>
                                     </div>
-                                    <div class="form-input col-md-4 mt-md-0 mt-3">
-
-                                        <input type="date" name="" placeholder="Date" required="">
-                                    </div>
-                                    <div class="bottom-btn col-md-4 mt-md-0 mt-3">
-                                        <button class="btn btn-style btn-secondary">
-                                            <span class="fa fa-search mr-3"
-                                                  aria-hidden="true"></span> Search
-                                        </button>
-                                    </div>
-                                </div>
                             </form>
                         </div>
                     </div>
@@ -43,3 +42,21 @@
         </div>
     </div>
 </section>
+
+
+<script>
+    function updateSelectedValue() {
+        var selectedValue = document.getElementById('selectpicker').value;
+        document.getElementById('selectedValue').value = selectedValue;
+    }
+</script>
+
+@*<script>
+    function updateFormAction() {
+        var selectedValue = document.getElementById('selectpicker').value;
+        //document.getElementById('destinationForm').action = '/Destination/DestinationDetails/' + selectedValue;
+        document.getElementById('destinationForm').value = selectedValue
+    }
+</script>*@
+
+@*action="/Destination/DestinationDetails/"*@

@@ -1,5 +1,6 @@
 ﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,8 @@ using System.Threading.Tasks;
 
 namespace TraversalCoreProje.Controllers
 {
+    [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class PdfReportController : Controller
     {
         public IActionResult Index()

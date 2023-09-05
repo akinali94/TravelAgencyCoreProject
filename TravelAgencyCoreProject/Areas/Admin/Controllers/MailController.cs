@@ -6,7 +6,7 @@ using TravelAgencyCoreProject.Models;
 
 namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
-    [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     [AllowAnonymous]
     public class MailController : Controller
     {

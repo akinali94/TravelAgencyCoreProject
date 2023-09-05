@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [AllowAnonymous]
+    [Authorize(Roles = "Admin")]
     public class UserController : Controller
     {
         private readonly IAppUserService _appUserService;

@@ -10,7 +10,7 @@ using TravelAgencyCoreProject.Areas.Admin.Models;
 namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [AllowAnonymous]
+    [Authorize(Roles = "Admin")]
     public class AnnouncementController : Controller
     {
         private readonly IAnnouncementService _announcementService;

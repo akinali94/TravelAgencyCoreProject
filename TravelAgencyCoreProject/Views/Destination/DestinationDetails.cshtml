@@ -1,10 +1,11 @@
-﻿
+﻿@model EntityLayer.Concrete.Destination
+
 @{
     ViewData["Title"] = "DestinationDetails";
     Layout = "~/Views/Shared/_UILayout.cshtml";
 }
 
-@model EntityLayer.Concrete.Destination
+
 
 @*<h1> Test Alanı</h1>
 <form method="get">
@@ -15,7 +16,7 @@
 
 <body>
     <!--header-->
-    <header id="site-header" class="fixed-top">
+    @*<header id="site-header" class="fixed-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg stroke">
                 <h1>
@@ -86,16 +87,17 @@
                 <!-- //toggle switch for light and dark theme -->
             </nav>
         </div>
-    </header>
+    </header>*@
     <!-- //header -->
     <!-- about breadcrumb -->
     <section class="w3l-about-breadcrumb text-left">
         <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
             <div class="container">
-                <h2 class="title">Single Page</h2>
+                <h2 class="title">@Model.City</h2>
                 <ul class="breadcrumbs-custom-path mt-2">
-                    <li><a href="#url">Home</a></li>
-                    <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Single Post </li>
+                    <li><a href="/Default/Index">Home</a></li>
+                    <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> <a href="/Destination/Index">Destinations</a> </li>
+                    <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> @Model.City </li>
                 </ul>
             </div>
         </div>
@@ -105,8 +107,10 @@
     <div class="py-5 w3l-homeblock1 text-center">
         <div class="container mt-md-3">
             <h3 class="blog-desc-big text-center mb-4">
-                Enjoy your trip with our energetic tour guides and experienced agency.
+                Enjoy your trip in @Model.City with our energetic tour guides and experienced agency.
             </h3>
+            <br/>
+            <p>You can read our guide <b>@Model.DestinationGuide.Name</b>'s article about <b>@Model.City</b></p>
             <div class="blog-post-align">
                 <div class="blog-post-img">
                     <a href="#"><img src="@Model.DestinationGuide.Image" alt="" class="rounded-circle img-fluid" /></a>
@@ -200,7 +204,7 @@
                             <div class="col-sm-9 mt-sm-0 mt-3">
                                 <h3 class="mb-3 title">@Model.DestinationGuide.Name</h3>
                                 <p>
-                                    @Model.Description
+                                    @Model.DestinationGuide.Description
                                 </p>
                                 <ul class="author-icons mt-4">
                                     <li>

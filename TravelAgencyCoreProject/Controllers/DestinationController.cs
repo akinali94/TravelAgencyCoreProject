@@ -8,16 +8,18 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace TravelAgencyCoreProject.Controllers
 {
+
     [AllowAnonymous]
+    [Route("Destination/[action]/{id?}")]
     public class DestinationController : Controller
     {
         //DestinationManager destinationManager1 = new DestinationManager(new EfDestinationDal());
         private readonly IDestionationService _destinationService;
-        private readonly UserManager<AppUser> _userManager;
-        public DestinationController(IDestionationService destinationService, UserManager<AppUser> userManager)
+        //private readonly UserManager<AppUser> _userManager;
+        public DestinationController(IDestionationService destinationService/*, UserManager<AppUser> userManager*/)
         {
             _destinationService = destinationService;
-            _userManager = userManager;
+            //_userManager = userManager;
         }
         public IActionResult Index()
         {
@@ -30,8 +32,9 @@ namespace TravelAgencyCoreProject.Controllers
         {
             ViewBag.i = id;
             ViewBag.destID = id;
-            var userID = await _userManager.FindByNameAsync(User.Identity.Name);
-            ViewBag.userId = userID;
+            TempData["idDest"] = id;
+            //var userID = await _userManager.FindByNameAsync(User.Identity.Name);
+            //ViewBag.userId = userID;
             //var values = _destinationService.TGetByID(id);
             var destinationGuide = _destinationService.TGetDestionationWithGuide(id);
 

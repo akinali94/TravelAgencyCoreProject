@@ -9,7 +9,8 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
-    [AllowAnonymous]
+    [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class ExcelController : Controller
     {
         private readonly IExcelService _excelService;

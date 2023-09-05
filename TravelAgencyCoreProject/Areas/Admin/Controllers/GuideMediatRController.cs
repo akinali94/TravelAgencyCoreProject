@@ -6,7 +6,7 @@ using TravelAgencyCoreProject.CQRS.Commands.GuideCommands;
 
 namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
-    [AllowAnonymous]
+    [Authorize(Roles = "Admin")]
     [Area("Admin")]
     public class GuideMediatRController : Controller
     {

@@ -9,7 +9,7 @@ using TravelAgencyCoreProject.Models;
 namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [AllowAnonymous]
+    [Authorize(Roles = "Admin")]
     public class CityController : Controller
     {
         private readonly IDestionationService _destinationService;

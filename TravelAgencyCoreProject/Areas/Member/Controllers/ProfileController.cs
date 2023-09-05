@@ -1,4 +1,5 @@
 ﻿using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using TravelAgencyCoreProject.Areas.Member.Models;
@@ -7,6 +8,7 @@ namespace TravelAgencyCoreProject.Areas.Member.Controllers
 {
     [Area("Member")]
     [Route("Member/[controller]/[action]")]
+    [Authorize(Roles = "Admin, Member")]
     public class ProfileController : Controller
     {
         private readonly UserManager<AppUser> _usermanager;

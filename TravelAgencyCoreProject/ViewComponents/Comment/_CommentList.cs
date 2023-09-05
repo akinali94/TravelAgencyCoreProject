@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace TravelAgencyCoreProject.ViewComponents.Comment
 {
+    
     public class _CommentList : ViewComponent
     {
         CommentManager commentManager1 = new CommentManager(new EfCommentDal());

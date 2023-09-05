@@ -10,8 +10,9 @@ namespace TravelAgencyCoreProject.ViewComponents.Default
 
         public IViewComponentResult Invoke()
         {
-            var values = destinationManager1.TGetList();
+            var values = destinationManager1.TGetLast4Destination();
             return View(values);
         }
+
     }
 }

@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace TravelAgencyCoreProject.Areas.Member.Controllers
 {
+    [Area("Member")]
+    [Authorize(Roles = "Admin, Member")]
     public class MessageController : Controller
     {
         public IActionResult Index()

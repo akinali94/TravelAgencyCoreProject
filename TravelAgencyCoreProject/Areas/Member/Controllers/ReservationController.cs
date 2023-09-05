@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -9,6 +10,7 @@ namespace TravelAgencyCoreProject.Areas.Member.Controllers
 {
 
     [Area("Member")]
+    [Authorize(Roles = "Admin, Member")]
     public class ReservationController : Controller
     {
         DestinationManager destinationManager1 = new DestinationManager(new EfDestinationDal());

@@ -7,6 +7,7 @@ namespace TravelAgencyCoreProject.Areas.Member.Controllers
 {
     [Area("Member")]
     [Route("Member/[controller]/[action]")]
+    [Authorize(Roles = "Admin, Member")]
     public class DestinationController : Controller
     {
         DestinationManager destinationManager = new DestinationManager(new EfDestinationDal());

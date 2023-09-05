@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [AllowAnonymous]
+    [Authorize(Roles = "Admin")]
     public class DestinationController : Controller
     {
         //DestinationManager destinationManager = new DestinationManager(new EfDestinationDal());

@@ -7,7 +7,7 @@ using TravelAgencyCoreProject.Areas.Admin.Models;
 namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [AllowAnonymous]
+    [Authorize(Roles = "Admin")]
     public class ApiExchangeController : Controller
     {
         public async Task<IActionResult> Index()

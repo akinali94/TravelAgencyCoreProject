@@ -6,7 +6,7 @@ using TravelAgencyCoreProject.Areas.Admin.Models;
 
 namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
-    [AllowAnonymous]
+    [Authorize(Roles = "Admin")]
     [Area("Admin")]
     public class VisitorApiController : Controller
     {
