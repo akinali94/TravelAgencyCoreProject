@@ -1,4 +1,4 @@
-﻿
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<AppUser> _signInManager
 
 <ul class="menu-inner py-1">
     <!-- Dashboard -->
@@ -119,11 +119,14 @@
             <div data-i18n="Analytics">User List</div>
         </a>
     </li>
-    <li class="menu-item">
-        <a href="index.html" class="menu-link">
-            <i class="menu-icon tf-icons bx bxs-face"></i>
-            <div data-i18n="Analytics">Log Out</div>
-        </a>
+    <li class="menu-item d-flex justify-content-center">
+        <div class="container bg-light">
+            <div class="col-md-12 text-center">
+                <form method="post" class="form-inline" asp-action="Logout" asp-controller="Login">
+                    <button type="submit" class="btn btn-dark">Log Out</button>
+                </form>
+            </div>
+        </div>
     </li>
 
 </ul>

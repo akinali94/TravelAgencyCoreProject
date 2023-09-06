@@ -126,6 +126,12 @@
   <data name="Destinations" xml:space="preserve">
     <value>Destinations</value>
   </data>
+  <data name="Edit Profile" xml:space="preserve">
+    <value>Edit Profile</value>
+  </data>
+  <data name="Home Page" xml:space="preserve">
+    <value>Home Page</value>
+  </data>
   <data name="Log Out" xml:space="preserve">
     <value>Log Out</value>
   </data>
@@ -137,8 +143,5 @@
   </data>
   <data name="Search" xml:space="preserve">
     <value>Search</value>
-  </data>
-  <data name="Your Profile" xml:space="preserve">
-    <value>Your Profile</value>
   </data>
 </root>

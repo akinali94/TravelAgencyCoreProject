@@ -126,6 +126,12 @@
   <data name="Destinations" xml:space="preserve">
     <value>Reiseziele</value>
   </data>
+  <data name="Edit Profile" xml:space="preserve">
+    <value>Profil bearbeiten</value>
+  </data>
+  <data name="Home Page" xml:space="preserve">
+    <value>Startseite</value>
+  </data>
   <data name="Log Out" xml:space="preserve">
     <value>Ausloggen</value>
   </data>
@@ -137,8 +143,5 @@
   </data>
   <data name="Search" xml:space="preserve">
     <value>Suchen</value>
-  </data>
-  <data name="Your Profile" xml:space="preserve">
-    <value>Dein Profil</value>
   </data>
 </root>

@@ -5,6 +5,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = "Admin")]
+    [Route("Admin/Dashboard")]
     public class DashboardController : Controller
     {
         public IActionResult Index()

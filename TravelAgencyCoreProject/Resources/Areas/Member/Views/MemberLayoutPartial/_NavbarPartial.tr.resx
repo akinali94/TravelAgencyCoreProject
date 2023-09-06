@@ -126,6 +126,12 @@
   <data name="Destinations" xml:space="preserve">
     <value>Rotalar</value>
   </data>
+  <data name="Edit Profile" xml:space="preserve">
+    <value>Profili Düzenle</value>
+  </data>
+  <data name="Home Page" xml:space="preserve">
+    <value>Ana Sayfa</value>
+  </data>
   <data name="Log Out" xml:space="preserve">
     <value>Çıkış</value>
   </data>
@@ -137,8 +143,5 @@
   </data>
   <data name="Search" xml:space="preserve">
     <value>Ara</value>
-  </data>
-  <data name="Your Profile" xml:space="preserve">
-    <value>Profilim</value>
   </data>
 </root>

@@ -48,7 +48,7 @@
             else if (User.Identity.IsAuthenticated && User.IsInRole("Member"))
             {
                 <div class="d-lg-block d-none">
-                    <a class="btn btn-style btn-info" href="@Url.Action("Index","Profile",new {area = "Member"})">My Profile</a>
+                    <a class="btn btn-style btn-info" href="@Url.Action("Index","Dashboard",new {area = "Member"})">My Profile</a>
                 </div>
                 <p>|</p>
                 <div class="d-lg-block d-none">

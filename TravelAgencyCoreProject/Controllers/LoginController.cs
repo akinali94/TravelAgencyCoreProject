@@ -72,11 +72,20 @@ namespace TravelAgencyCoreProject.Controllers
                 .ToArray();
             if (ModelState.IsValid)
             {
+
                 var result = await _signInManager.PasswordSignInAsync(p.Username, p.Password,false,true);
+                var user = await _userManager.FindByNameAsync(p.Username);
+                var role = await _userManager.GetRolesAsync(user);
                 if (result.Succeeded)
                 {
-                    
-                    return RedirectToAction("Index", "Profile", new {area = "Member"});
+                    if (role.Contains("Admin"))
+                    {
+						return RedirectToAction("Index", "Dashboard", new { area = "Admin" });
+					}
+                    else
+                    {
+						return RedirectToAction("Index", "Dashboard", new { area = "Member" });
+					}  
                 }
                 else
                 {
@@ -84,6 +93,15 @@ namespace TravelAgencyCoreProject.Controllers
                 }
             }
             return View();
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+
+            return RedirectToAction("Index", "Default");
         }
     }
 }
