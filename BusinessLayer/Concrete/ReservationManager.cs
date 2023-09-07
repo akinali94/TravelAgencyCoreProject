@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +33,11 @@ namespace BusinessLayer.Concrete
             return _reservationDal.GetListWithReservationByWaitApproval(id);
         }
 
+        public void TActive(int id)
+        {
+            _reservationDal.Active(id);
+        }
+
         public void TAdd(Reservation t)
         {
             _reservationDal.Insert(t);
@@ -49,12 +55,29 @@ namespace BusinessLayer.Concrete
 
         public List<Reservation> TGetList()
         {
-            throw new NotImplementedException();
+            return _reservationDal.GetList();
+        }
+
+        public List<Reservation> TGetListWithUserAndDestination()
+        {
+            var values = _reservationDal.GetListWithUserAndDestination();
+            return values;
+        }
+
+        public void TPrevious(int id)
+        {
+            _reservationDal.Previous(id);
+
         }
 
         public void TUpdate(Reservation t)
         {
             throw new NotImplementedException();
+        }
+
+        public void TWait(int id)
+        {
+            _reservationDal.Wait(id);
         }
     }
 }

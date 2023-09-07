@@ -25,9 +25,9 @@
     <td><img src="@item.Image" height="50" width="50" /></td>
     <td>@item.Name</td>
     <td>@item.Description</td>
-    <td><a href="#" class="btn btn-outline-danger">Sil</a></td>
-    <td><a href="/Admin/GuideMediatR/GetGuides/@item.GuideID" class="btn btn-outline-success">Güncelle</a></td>
+    <td><a href="@Url.Action("DeleteGuide", "GuideMediatR", new{id = @item.GuideID})" class="btn btn-outline-danger">Delete</a></td>
+            <td><a href="#" class="btn btn-outline-success">Update</a></td> @*@Url.Action("GetGuides", "GuideMediatR", new{id = @item.GuideID})*@
 </tr>
     }
 </table>
-<a href="/Admin/GuideMediatR/AddGuide/" class="btn btn-outline-primary">Add New Guide</a>
+<a href="@Url.Action("AddGuide","GuideMediatR")" class="btn btn-outline-primary">Add New Guide</a>

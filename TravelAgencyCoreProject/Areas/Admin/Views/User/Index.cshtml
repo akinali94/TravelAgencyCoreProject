@@ -4,7 +4,7 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    int counter = 0;
+    int counter = 1;
 }
 
 <h1>Guests List</h1>
@@ -23,14 +23,16 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>@{counter = counter+1;}</td>
+            <td>@{
+                    counter = counter + 1;
+                }</td>
             <td>@item.Name @item.Surname</td>
             <td>@item.UserName</td>
             <td>@item.Email</td>
-            <td><a href="/Admin/User/DeleteUser/@item.Id" class="btn btn-outline-danger">Delete</a></td>
-            <td><a href="/Admin/User/EditUser/@item.Id" class="btn btn-outline-success">Edit</a></td>
-            <td><a href="/Admin/User/CommentUser/@item.Id" class="btn btn-outline-info">Comments</a></td>
-            <td><a href="/Admin/User/ReservationUser/@item.Id" class="btn btn-outline-secondary">Reservations</a></td>
+            <td><a href="@Url.Action("DeleteUser","User", new{id = @item.Id})" class="btn btn-outline-danger">Delete</a></td>
+            <td><a href="@Url.Action("EditUser","User", new{id = @item.Id})" class="btn btn-outline-success">Edit</a></td>
+            <td><a href="@Url.Action("CommentUser","User", new{id = @item.Id})" class="btn btn-outline-info">Comments</a></td>
+            <td><a href="@Url.Action("ReservationUser","User", new{id = @item.Id})" class="btn btn-outline-secondary">Reservations</a></td>
 
         </tr>
     }

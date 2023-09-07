@@ -7,7 +7,7 @@ using TravelAgencyCoreProject.Areas.Admin.Models;
 namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Route("Admin/Role")]
+    [Route("Admin/Role/[action]")]
     [Authorize(Roles = "Admin")]
     public class RoleController : Controller
     {
@@ -20,7 +20,6 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
             _userManager = userManager;
         }
 
-        [Route("Index")]
         public IActionResult Index()
         {
             var values = _roleManager.Roles.ToList();
@@ -28,14 +27,12 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        [Route("CreateRole")]
         public IActionResult CreateRole()
         {
             return View();
         }
 
         [HttpPost]
-        [Route("CreateRole")]
         public async Task<IActionResult> CreateRole(CreateRoleViewModel createVM)
         {
             AppRole role = new AppRole()
@@ -54,7 +51,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
             }
         }
 
-        [Route("DeleteRole/{id}")]
+        [Route("Admin/Role/DeleteRole/{id?}")]
         public async Task<IActionResult> DeleteRole(int id)
         {
             var value = _roleManager.Roles.FirstOrDefault(x => x.Id == id);
@@ -63,7 +60,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        [Route("UpdateRole/{id}")]
+        [Route("{id?}")]
         public IActionResult UpdateRole(int id)
         {
             var value = _roleManager.Roles.FirstOrDefault(x => x.Id == id);
@@ -76,7 +73,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        [Route("UpdateRole/{id}")]
+        [Route("{id?}")]
         public async Task<IActionResult> UpdateRole(UpdateRoleViewModel updateRoleViewModel)
         {
             var value = _roleManager.Roles.FirstOrDefault(x => x.Id == updateRoleViewModel.RoleID);
@@ -85,15 +82,15 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
-        [Route("UserList")]
+        
         public IActionResult UserList()
         {
             var values = _userManager.Users.ToList();
             return View(values);
         }
 
-        [Route("AssignRole/{id}")]
         [HttpGet]
+        [Route("{id?}")]
         public async Task<IActionResult> AssignRole(int id)
         {
             var user = _userManager.Users.FirstOrDefault(x => x.Id == id);
@@ -111,8 +108,9 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
             }
             return View(roleAssignViewModels);
         }
+
         [HttpPost]
-        [Route("AssignRole/{id}")]
+        [Route("{id?}")]
         public async Task<IActionResult> AssignRole(List<RoleAssignViewModel> model)
         {
             var userid = (int)TempData["userid"];

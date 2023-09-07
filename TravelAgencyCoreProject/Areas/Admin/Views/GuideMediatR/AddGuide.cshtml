@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Yeni Rehber Ekleme Sayfası</h2>
+<h2>Add New Guide with MediatR</h2>
 
 <form method="post">
     <label>Guide Name</label>
@@ -13,6 +13,15 @@
     <br />
     <label>Guide Description</label>
     <input type="text" class="form-control" asp-for="Description" />
+    <br />
+    <label>Guide Image</label>
+    <input type="text" class="form-control" asp-for="Image" />
+    <br />
+        <label>Guide Twitter</label>
+    <input type="text" class="form-control" asp-for="TwitterUrl" />
+    <br />
+    <label>Guide Instagram</label>
+    <input type="text" class="form-control" asp-for="InstaUrl" />
     <br />
     <button class="btn btn-outline-info">Add Guide</button>
 </form>

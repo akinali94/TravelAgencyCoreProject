@@ -13,7 +13,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = "Admin")]
-    [Route("Admin/Guide")]
+    [Route("Admin/Guide/[action]")]
 
     public class GuideController : Controller
     {
@@ -61,15 +61,14 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
             }
         }
 
-        [Route("EditGuide")]
         [HttpGet]
+        [Route("Admin/Guide/EditGuide/{id?}")]
         public IActionResult EditGuide(int id)
         {
             var values = _guideService.TGetByID(id);
             return View(values);
         }
 
-        [Route("EditGuide")]
         [HttpPost]
         public IActionResult EditGuide(Guide guide)
         {
@@ -77,14 +76,14 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
-        [Route("ChangeToTrue/{id}")]
+        [Route("Admin/Guide/ChangeToTrue/{id?}")]
         public IActionResult ChangeToTrue(int id)
         {
             _guideService.TChangeToTrueByGuide(id);
             return RedirectToAction("Index","Guide", new {area = "Admin"});
         }
 
-        [Route("ChangeToFalse/{id}")]
+        [Route("Admin/Guide/ChangeToFalse/{id?}")]
         public IActionResult ChangeToFalse(int id)
         {
             _guideService.TChangeToFalseByGuide(id);

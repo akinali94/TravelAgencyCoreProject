@@ -7,7 +7,7 @@ using TravelAgencyCoreProject.Areas.Member.Models;
 namespace TravelAgencyCoreProject.Areas.Member.Controllers
 {
     [Area("Member")]
-    [Route("Member/[controller]/[action]")]
+    [Route("Member/Profile/[action]")]
     [Authorize(Roles = "Admin, Member")]
     public class ProfileController : Controller
     {

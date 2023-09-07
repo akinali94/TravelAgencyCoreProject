@@ -7,8 +7,8 @@ namespace TravelAgencyCoreProject.Areas.Member.Controllers
 {
     [Area("Member")]
     [Authorize(Roles = "Admin, Member")]
-	[Route("Member/Dashboard")]
-	public class DashboardController : Controller
+    [Route("Member/Dashboard/[action]")]
+    public class DashboardController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
         public DashboardController(UserManager<AppUser> userManager)

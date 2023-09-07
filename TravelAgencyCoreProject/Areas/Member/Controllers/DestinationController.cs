@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace TravelAgencyCoreProject.Areas.Member.Controllers
 {
     [Area("Member")]
-    [Route("Member/[controller]/[action]")]
+    [Route("Member/Destination/[action]")]
     [Authorize(Roles = "Admin, Member")]
     public class DestinationController : Controller
     {
@@ -18,7 +18,7 @@ namespace TravelAgencyCoreProject.Areas.Member.Controllers
             return View(values);
         }
 
-
+        
         public IActionResult SearchCitiesByName(string searchString)
         {
             ViewData["CurrentFilter"] = searchString;

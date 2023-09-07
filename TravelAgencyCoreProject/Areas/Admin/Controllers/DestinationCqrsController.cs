@@ -8,6 +8,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = "Admin")]
+    [Route("Admin/DestinationCqrs/[action]")]
     public class DestinationCqrsController : Controller
     {
         private readonly GetAllDestinationQueryHandler _getAllDestinationQueryHandler;

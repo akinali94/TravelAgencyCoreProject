@@ -8,6 +8,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = "Admin")]
+    [Route("Admin/Comment/[action]")]
     public class CommentController : Controller
     {
         //CommentManager commentManager = new CommentManager(new EfCommentDal());
@@ -24,6 +25,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
             return View(values);
         }
 
+        [Route("Admin/Comment/DeleteComment/{id?}")]
         public IActionResult DeleteComment(int id)
         {
             var values = _commentService.TGetByID(id);

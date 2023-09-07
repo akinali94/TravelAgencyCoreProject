@@ -7,6 +7,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = "Admin")]
+    [Route("Admin/User/[action]")]
     public class UserController : Controller
     {
         private readonly IAppUserService _appUserService;
@@ -24,6 +25,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
             return View(values);
         }
 
+        [Route("{id?}")]
         public IActionResult DeleteUser(int id)
         {
             var values = _appUserService.TGetByID(id);
@@ -32,6 +34,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        [Route("{id?}")]
         public IActionResult EditUser(int id)
         {
             var values = _appUserService.TGetByID(id);
@@ -39,18 +42,24 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [Route("{id?}")]
+
         public IActionResult EditUser(AppUser appUser)
         {
             _appUserService.TDelete(appUser);
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
+        [Route("{id?}")]
         public IActionResult CommentUser(int id)
         {
             _appUserService.TGetList();
             return View();
         }
 
+        [HttpGet]
+        [Route("{id?}")]
         public IActionResult ReservationUser(int id)
         {
             var values = _reservationService.GetListWithReservationByAccepted(id);

@@ -23,8 +23,10 @@
             <tr>
                 <td>@count</td>
                 <td>@item.Name</td>
-                <td><a href="/Admin/Role/DeleteRole/@item.Id" class="btn btn-outline-danger">Delete</a></td>
-                <td><a href="/Admin/Role/UpdateRole/@item.Id" class="btn btn-outline-success">Update</a></td>
+                
+                
+                <td><a href="@Url.Action("DeleteRole", "Role", new{id = item.Id})" class="btn btn-outline-danger">Delete</a></td>
+                <td><a href="@Url.Action("UpdateRole", "Role", new{id = item.Id})" class="btn btn-outline-success">Update</a></td>
             </tr>
         }
 

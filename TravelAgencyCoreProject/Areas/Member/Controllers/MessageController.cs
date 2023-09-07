@@ -5,6 +5,7 @@ namespace TravelAgencyCoreProject.Areas.Member.Controllers
 {
     [Area("Member")]
     [Authorize(Roles = "Admin, Member")]
+    [Route("Member/Message/[action]")]
     public class MessageController : Controller
     {
         public IActionResult Index()

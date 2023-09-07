@@ -10,6 +10,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = "Admin")]
+    [Route("Admin/City/[action]")]
     public class CityController : Controller
     {
         private readonly IDestionationService _destinationService;

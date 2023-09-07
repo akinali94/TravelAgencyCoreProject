@@ -8,6 +8,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = "Admin")]
+    [Route("Admin/ApiExchange/[action]")]
     public class ApiExchangeController : Controller
     {
         public async Task<IActionResult> Index()

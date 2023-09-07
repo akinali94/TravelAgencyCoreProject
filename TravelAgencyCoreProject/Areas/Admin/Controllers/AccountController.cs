@@ -7,7 +7,8 @@ using TravelAgencyCoreProject.Areas.Admin.Models;
 namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles ="Admin")]
+    [Authorize(Roles = "Admin")]
+    [Route("Admin/Account/[action]")]
     public class AccountController : Controller
     {
         private readonly IAccountService _accountService;

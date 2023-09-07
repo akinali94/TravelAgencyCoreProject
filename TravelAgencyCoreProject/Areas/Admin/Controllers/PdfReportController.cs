@@ -12,6 +12,7 @@ namespace TraversalCoreProje.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = "Admin")]
+    [Route("Admin/PdfReport/[action]")]
     public class PdfReportController : Controller
     {
         public IActionResult Index()

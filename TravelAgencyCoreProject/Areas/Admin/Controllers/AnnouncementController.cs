@@ -11,6 +11,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = "Admin")]
+    [Route("Admin/Announcement/[action]")]
     public class AnnouncementController : Controller
     {
         private readonly IAnnouncementService _announcementService;
@@ -63,6 +64,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
             return View(model);
         }
 
+        [Route("{id?}")]
         public IActionResult DeleteAnnouncement(int id)
         {
             var values = _announcementService.TGetByID(id);
@@ -71,6 +73,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        [Route("{id?}")]
         public IActionResult UpdateAnnouncement(int id)
         {
             var values = _mapper.Map<AnnouncementUpdateDTO>(_announcementService.TGetByID(id));
@@ -78,6 +81,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [Route("{id?}")]
         public IActionResult UpdateAnnouncement(AnnouncementUpdateDTO model)
         {
             if (ModelState.IsValid)

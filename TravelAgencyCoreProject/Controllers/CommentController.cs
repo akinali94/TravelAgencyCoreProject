@@ -1,7 +1,9 @@
-﻿using BusinessLayer.Concrete;
+﻿using BusinessLayer.Abstract;
+using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace TravelAgencyCoreProject.Controllers
@@ -9,8 +11,15 @@ namespace TravelAgencyCoreProject.Controllers
     [AllowAnonymous]
     public class CommentController : Controller
     {
-        CommentManager commentManager1 = new CommentManager(new EfCommentDal());
-        
+        private readonly ICommentService _commentService;
+        private readonly UserManager<AppUser> _userManager;
+
+        public CommentController(ICommentService commentService, UserManager<AppUser> userManager)
+        {
+            _commentService = commentService;
+            _userManager = userManager;
+        }
+
         [HttpGet]
         public PartialViewResult AddComment(int id)
         {
@@ -18,11 +27,15 @@ namespace TravelAgencyCoreProject.Controllers
             return PartialView();
         }
         [HttpPost]
-        public IActionResult AddComment(Comment p)
+        public async Task<IActionResult> AddComment(Comment p)
         {
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            p.AppUserID = user.Id;
+            p.CommentUser = user.Name;
             p.CommentTime = Convert.ToDateTime(DateTime.Now.ToShortDateString());
             p.CommentState = true;
-            commentManager1.TAdd(p);
+
+            _commentService.TAdd(p);
             return RedirectToAction("Index", "Destination");
         }
         

@@ -6,8 +6,9 @@ using TravelAgencyCoreProject.Areas.Admin.Models;
 
 namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     [Authorize(Roles = "Admin")]
-    [AllowAnonymous]
+    [Route("Admin/MovieApi/[action]")]
     public class MovieApiController : Controller
     {
         public async Task<IActionResult> Index()

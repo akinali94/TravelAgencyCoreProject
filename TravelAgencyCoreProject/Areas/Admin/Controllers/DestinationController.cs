@@ -9,6 +9,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = "Admin")]
+    [Route("Admin/Destination/[action]")]
     public class DestinationController : Controller
     {
         //DestinationManager destinationManager = new DestinationManager(new EfDestinationDal());
@@ -37,6 +38,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
+        [Route("/Admin/Destination/DeleteDestination/{id?}")]
         public IActionResult DeleteDestination(int id)
         {
             var values = _destinationService.TGetByID(id);
@@ -45,6 +47,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        [Route("/Admin/Destination/UpdateDestination/{id?}")]
         public IActionResult UpdateDestination(int id)
         {
             var values = _destinationService.TGetByID(id);

@@ -18,6 +18,9 @@ namespace TravelAgencyCoreProject.CQRS.Handlers.GuideHandler
             {
                 Name = request.Name,
                 Description = request.Description,
+                Image = request.Image,
+                TwitterUrl = request.TwitterUrl,
+                InstagramUrl = request.InstaUrl,
                 Status = true
             });
             await _context.SaveChangesAsync();

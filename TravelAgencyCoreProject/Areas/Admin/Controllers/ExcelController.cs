@@ -11,6 +11,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = "Admin")]
+    [Route("Admin/Excel/[action]")]
     public class ExcelController : Controller
     {
         private readonly IExcelService _excelService;

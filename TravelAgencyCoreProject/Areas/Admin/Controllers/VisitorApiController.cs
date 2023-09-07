@@ -8,6 +8,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin")]
     [Area("Admin")]
+    [Route("Admin/VisitorApi/[action]")]
     public class VisitorApiController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
@@ -20,7 +21,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("http://localhost:4042/api/Visitor");
+            var responseMessage = await client.GetAsync("http://localhost:7004/api/Visitor");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
@@ -42,7 +43,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(p);
             StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PostAsync("http://localhost:4042/api/Visitor", content);
+            var responseMessage = await client.PostAsync("http://localhost:7004/api/Visitor", content);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
@@ -53,7 +54,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
         public async Task<IActionResult> DeleteVisitor(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.DeleteAsync($"http://localhost:4042/api/Visitor/{id}");
+            var responseMessage = await client.DeleteAsync($"http://localhost:7004/api/Visitor/{id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
@@ -65,7 +66,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
         public async Task<IActionResult> UpdateVisitor(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync($"http://localhost:4042/api/Visitor/{id}");
+            var responseMessage = await client.GetAsync($"http://localhost:7004/api/Visitor/{id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
@@ -81,7 +82,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(p);
             StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PutAsync("http://localhost:4042/api/Visitor", content);
+            var responseMessage = await client.PutAsync("http://localhost:7004/api/Visitor", content);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");

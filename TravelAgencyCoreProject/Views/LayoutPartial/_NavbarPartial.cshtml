@@ -42,7 +42,9 @@
                 </div>
                 <p>|</p>
                 <div class="d-lg-block d-none">
-                    <a class="btn btn-style btn-secondary" href="Login/SignIn">Log Out</a>
+                    <form method="post" class="form-inline" asp-action="Logout" asp-controller="Login">
+                        <button type="submit" class="btn btn-style btn-secondary">Log Out</button>
+                    </form>
                 </div>
             }
             else if (User.Identity.IsAuthenticated && User.IsInRole("Member"))
@@ -52,7 +54,9 @@
                 </div>
                 <p>|</p>
                 <div class="d-lg-block d-none">
-                    <a class="btn btn-style btn-secondary" href="Login/SignIn">Log Out</a>
+                    <form method="post" class="form-inline" asp-action="Logout" asp-controller="Login">
+                        <button type="submit" class="btn btn-style btn-secondary">Log Out</button>
+                    </form>
                 </div>
             }
             else

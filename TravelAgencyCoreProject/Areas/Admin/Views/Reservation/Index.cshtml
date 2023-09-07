@@ -1,0 +1,75 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Reservation>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Reservations</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ReservationID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AppUser.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Destination.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberofPeople)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReservationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+
+            <th>Change Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReservationID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AppUser.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destination.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberofPeople)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReservationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+
+            <td>
+                @Html.ActionLink("Approval", "Wait", new { id=item.ReservationID }) |
+                @Html.ActionLink("Previous", "Previous", new { id=item.ReservationID }) |
+                @Html.ActionLink("Active", "Active", new { id=item.ReservationID })
+            </td>
+            <td>
+                    @Html.ActionLink("Delete", "Delete", new { id=item.ReservationID })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

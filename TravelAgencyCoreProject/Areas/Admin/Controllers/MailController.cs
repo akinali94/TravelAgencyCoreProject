@@ -6,8 +6,9 @@ using TravelAgencyCoreProject.Models;
 
 namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     [Authorize(Roles = "Admin")]
-    [AllowAnonymous]
+    [Route("Admin/Mail/[action]")]
     public class MailController : Controller
     {
         [HttpGet]

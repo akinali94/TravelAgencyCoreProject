@@ -6,6 +6,7 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = "Admin")]
+    [Route("Admin/ContactUs/[action]")]
     public class ContactUsController : Controller
     {
         IContactUsService _contactUsService;

@@ -11,6 +11,7 @@ namespace TravelAgencyCoreProject.Areas.Member.Controllers
 
     [Area("Member")]
     [Authorize(Roles = "Admin, Member")]
+    [Route("Member/Reservation/[action]")]
     public class ReservationController : Controller
     {
         DestinationManager destinationManager1 = new DestinationManager(new EfDestinationDal());
@@ -54,10 +55,11 @@ namespace TravelAgencyCoreProject.Areas.Member.Controllers
         }
 
         [HttpPost]
-        public IActionResult NewReservation(Reservation p)
+        public async Task<IActionResult> NewReservation(Reservation p)
         {
             p.Status = "Waiting for Approval";
-            p.AppUserID = 10;
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            p.AppUserID = user.Id;
             reservationManager1.TAdd(p);
             return RedirectToAction("MyCurrentReservation");
         }
