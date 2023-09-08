@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Concrete;
+﻿using BusinessLayer.Abstract;
+using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -8,10 +9,14 @@ namespace TravelAgencyCoreProject.Controllers
     [AllowAnonymous]
     public class GuideController : Controller
     {
-        GuiderManager guideManager = new GuiderManager(new EfGuideDal());
+        private readonly IGuideService _guideService;
+        public GuideController(IGuideService guideService)
+        {
+            _guideService = guideService;
+        }
         public IActionResult Index()
         {
-            var values = guideManager.TGetList();
+            var values = _guideService.TGetList();
             return View(values);
         }
     }

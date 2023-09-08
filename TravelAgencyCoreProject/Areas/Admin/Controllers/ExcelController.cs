@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Abstract;
+using BusinessLayer.Concrete;
 using ClosedXML.Excel;
 using DataAccessLayer.Concrete;
 using Microsoft.AspNetCore.Authorization;
@@ -15,10 +16,12 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
     public class ExcelController : Controller
     {
         private readonly IExcelService _excelService;
+        private readonly Context _context;
 
-        public ExcelController(IExcelService excelService)
+        public ExcelController(IExcelService excelService, Context context)
         {
             _excelService = excelService;
+            _context = context;
         }
         public IActionResult Index()
         {
@@ -28,16 +31,15 @@ namespace TravelAgencyCoreProject.Areas.Admin.Controllers
         public List<DestinationViewModel> DestinationList()
         {
             List<DestinationViewModel> destinationModel = new List<DestinationViewModel>();
-            using (var c = new Context())
-            {
-                destinationModel = c.Destinations.Select(x => new DestinationViewModel
+
+                destinationModel = _context.Destinations.Select(x => new DestinationViewModel
                 {
                     City = x.City,
                     DayNight = x.DayNight,
                     Price = x.Price,
                     Capacity = x.Capacity
                 }).ToList();
-            }
+
             return destinationModel;
         }
         public IActionResult StaticExcelReport()

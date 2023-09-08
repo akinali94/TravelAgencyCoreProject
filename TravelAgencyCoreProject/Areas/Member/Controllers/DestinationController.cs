@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Concrete;
+﻿using BusinessLayer.Abstract;
+using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -10,11 +11,17 @@ namespace TravelAgencyCoreProject.Areas.Member.Controllers
     [Authorize(Roles = "Admin, Member")]
     public class DestinationController : Controller
     {
-        DestinationManager destinationManager = new DestinationManager(new EfDestinationDal());
+        private readonly IDestionationService _destinationService;
+
+        public DestinationController(IDestionationService destinationService)
+        {
+            _destinationService = destinationService;
+        }
+
         public IActionResult Index()
         {
 
-            var values = destinationManager.TGetList();
+            var values = _destinationService.TGetList();
             return View(values);
         }
 
@@ -22,7 +29,7 @@ namespace TravelAgencyCoreProject.Areas.Member.Controllers
         public IActionResult SearchCitiesByName(string searchString)
         {
             ViewData["CurrentFilter"] = searchString;
-            var values = from x in destinationManager.TGetList() select x;
+            var values = from x in _destinationService.TGetList() select x;
             if(!string.IsNullOrEmpty(searchString) )
             {
                 values = values.Where(y => y.City.Contains(searchString));

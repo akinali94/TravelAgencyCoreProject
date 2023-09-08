@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Concrete;
+﻿using BusinessLayer.Abstract;
+using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,10 +7,14 @@ namespace TravelAgencyCoreProject.ViewComponents.Default
 {
     public class _FeaturePartial : ViewComponent
     {
-        FeatureManager featureManager1 = new FeatureManager(new EfFeatureDal());
+        private readonly IFeatureService _featureService;
+        public _FeaturePartial(IFeatureService featureService)
+        {
+            _featureService = featureService;
+        }
         public IViewComponentResult Invoke()
         {
-            var values = featureManager1.TGetList();
+            var values = _featureService.TGetList();
             return View(values);
         }
     }

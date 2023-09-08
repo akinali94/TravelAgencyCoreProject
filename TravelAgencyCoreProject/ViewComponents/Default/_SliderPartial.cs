@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Concrete;
+﻿using BusinessLayer.Abstract;
+using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,10 +7,16 @@ namespace TravelAgencyCoreProject.ViewComponents.Default
 {
     public class _SliderPartial : ViewComponent
     {
-        DestinationManager destinationManager1 = new DestinationManager(new EfDestinationDal());
+        private readonly IDestionationService _destServ;
+
+        public _SliderPartial(IDestionationService destServ)
+        {
+            _destServ = destServ;
+        }
+
         public IViewComponentResult Invoke()
         {
-            var values = destinationManager1.TGetList();
+            var values = _destServ.TGetList();
             return View(values); 
         }
 

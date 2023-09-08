@@ -22,10 +22,11 @@ using TravelAgencyCoreProject.CQRS.Handlers.DestinationHandler;
 using TravelAgencyCoreProject.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+var connection = string.Empty;
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<Context>(options =>
-	options.UseSqlServer(connectionString));
+//var connectionString = builder.Configuration.GetConnectionString("AzureConnection_string");
+//builder.Services.AddDbContext<Context>(options =>
+//	options.UseSqlServer(connectionString));
 
 
 /* - These codes copied to the Container folder in BLL
@@ -143,13 +144,21 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-	app.UseMigrationsEndPoint();
+    builder.Configuration.AddEnvironmentVariables().AddJsonFile("appsettings.Development.json");
+    connection = builder.Configuration.GetConnectionString("AzureConnection_string");
+
+    app.UseMigrationsEndPoint();
 }
 else
 {
-	app.UseExceptionHandler("/Error");
+    connection = Environment.GetEnvironmentVariable("AzureConnection_string");
+
+    app.UseExceptionHandler("/Error");
 	app.UseHsts();
 }
+
+builder.Services.AddDbContext<Context>(options =>
+    options.UseSqlServer(connection));
 
 app.UseStatusCodePagesWithReExecute("/ErrorPage/Error404", "?code ={0}");
 
