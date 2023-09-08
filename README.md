@@ -17,5 +17,5 @@ Login, Register, Ajax, API, API Consume, Reporting, Dashboard, Password Reset, E
 Publish, Deploy
 
 
-<ins> # Live Link </ins>
+# Live Link
 https://aliakintraversal.azurewebsites.net
