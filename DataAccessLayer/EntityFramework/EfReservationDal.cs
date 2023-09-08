@@ -13,68 +13,55 @@ namespace DataAccessLayer.EntityFramework
 {
     public class EfReservationDal : GenericRepository<Reservation>, IReservationDal
     {
+        public EfReservationDal(Context context) : base(context)
+        {
+
+        }
         public List<Reservation> GetListWithUserAndDestination()
         {
-            using(var context  = new Context())
-            {
-                return context.Reservations.Include(x => x.AppUser).Include(x => x.Destination).ToList();
-            }
+                return _context.Reservations.Include(x => x.AppUser).Include(x => x.Destination).ToList();
         }
         public List<Reservation> GetListWithReservationByAccepted(int id)
         {
-            using (var context = new Context())
-            {
-                return context.Reservations.Include(x => x.Destination).Where(x => x.AppUserID == id && x.Status == "Active").ToList();
-            }
+                return _context.Reservations.Include(x => x.Destination).Where(x => x.AppUserID == id && x.Status == "Active").ToList();
+            
         }
 
         public List<Reservation> GetListWithReservationByPrevious(int id)
         {
-            using (var context = new Context())
-            {
-                return context.Reservations.Include(x => x.Destination).Where(x => x.AppUserID == id && x.Status == "Previous").ToList();
-            }
+                return _context.Reservations.Include(x => x.Destination).Where(x => x.AppUserID == id && x.Status == "Previous").ToList();
+            
         }
 
         public List<Reservation> GetListWithReservationByWaitApproval(int id)
         {
-            using (var context = new Context())
-            {
-                return context.Reservations.Include(x => x.Destination).Where(x => x.AppUserID == id && x.Status == "Waiting for Approval").ToList();
-            }
+
+                return _context.Reservations.Include(x => x.Destination).Where(x => x.AppUserID == id && x.Status == "Waiting for Approval").ToList();
         }
 
         public void Wait(int id)
         {
-            using (var context = new Context())
-            {
-                var value = context.Reservations.Find(id);
+                var value = _context.Reservations.Find(id);
                 value.Status = "Waiting for Approval";
-                context.Update(value);
-                context.SaveChanges();
-            }
+                _context.Update(value);
+                _context.SaveChanges();
         }
 
         public void Previous(int id)
         {
-            using (var context = new Context())
-            {
-                var value = context.Reservations.Find(id);
+                var value = _context.Reservations.Find(id);
                 value.Status = "Previous";
-                context.Update(value);
-                context.SaveChanges();
-            }
+                _context.Update(value);
+                _context.SaveChanges();
+          
         }
 
         public void Active(int id)
         {
-            using (var context = new Context())
-            {
-                var value = context.Reservations.Find(id);
+                var value = _context.Reservations.Find(id);
                 value.Status = "Active";
-                context.Update(value);
-                context.SaveChanges();
-            }
+                _context.Update(value);
+                _context.SaveChanges();
         }
     }
 }
