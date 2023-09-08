@@ -12,6 +12,11 @@ namespace DataAccessLayer.Repository
     public class GenericRepository<T> : IGenericDal<T> where T : class
     {
         protected readonly Context _context;
+
+        public GenericRepository()
+        {
+            
+        }
         public GenericRepository(Context context)
         {
             _context = context;

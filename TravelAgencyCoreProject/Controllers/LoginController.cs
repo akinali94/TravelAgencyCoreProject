@@ -40,6 +40,8 @@ namespace TravelAgencyCoreProject.Controllers
             if(p.Password == p.ConfirmPassword)
             {
                 var result = await _userManager.CreateAsync(appUser1, p.Password);
+                var createdUser = await _userManager.FindByEmailAsync(appUser1.Email);
+                await _userManager.AddToRoleAsync(createdUser, "Member");
 
                 if(result.Succeeded)
                 {

@@ -23,12 +23,13 @@ namespace BusinessLayer.Concrete
 
         public void TDelete(AppUser t)
         {
-            throw new NotImplementedException();
+            _appUserDal.Delete(t);
+            
         }
 
         public AppUser TGetByID(int id)
         {
-            throw new NotImplementedException();
+            return _appUserDal.GetById(id);
         }
 
         public List<AppUser> TGetList()

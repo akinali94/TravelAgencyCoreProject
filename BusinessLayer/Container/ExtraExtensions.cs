@@ -21,30 +21,42 @@ namespace BusinessLayer.Container
     {
         public static void ContainerDependencies(this IServiceCollection services)
         {
-            services.AddScoped<ICommentService, CommentManager>();
-            services.AddScoped<ICommentDal, EfCommentDal>();
+            services.AddScoped<IAboutService, AboutManager>();
+            services.AddScoped<IAboutDal, EfAboutDal>();
 
-            services.AddScoped<IDestionationService, DestinationManager>();
-            services.AddScoped<IDestinationDal, EfDestinationDal>();
+            services.AddScoped<IAnnouncementService, AnnouncementManager>();
+            services.AddScoped<IAnnouncementDal, EfAnnouncementDal>();
 
             services.AddScoped<IAppUserService, AppUserManager>();
             services.AddScoped<IUserDal, EfAppUserDal>();
 
-            
-            services.AddScoped<IReservationService, ReservationManager>();
-            services.AddScoped<IReservationDal, EfReservationDal>();
-
-            services.AddScoped<IGuideService, GuiderManager>();
-            services.AddScoped<IGuideDal, EfGuideDal>();
-
-            services.AddScoped<IExcelService, ExcelManager>();
-            services.AddScoped<IPdfService, PdfManager>();
+            services.AddScoped<ICommentService, CommentManager>();
+            services.AddScoped<ICommentDal, EfCommentDal>();
 
             services.AddScoped<IContactUsService, ContactUsManager>();
             services.AddScoped<IContactUsDal, EfContactUsDal>();
 
-            services.AddScoped<IAnnouncementService, AnnouncementManager>();
-            services.AddScoped<IAnnouncementDal, EfAnnouncementDal>();
+            services.AddScoped<IDestionationService, DestinationManager>();
+            services.AddScoped<IDestinationDal, EfDestinationDal>();
+
+            services.AddScoped<IExcelService, ExcelManager>();
+
+            services.AddScoped<IFeatureService, FeatureManager>();
+            services.AddScoped<IFeatureDal, EfFeatureDal>();
+
+            services.AddScoped<IGuideService, GuiderManager>();
+            services.AddScoped<IGuideDal, EfGuideDal>();
+
+            services.AddScoped<IPdfService, PdfManager>();
+
+            services.AddScoped<IReservationService, ReservationManager>();
+            services.AddScoped<IReservationDal, EfReservationDal>();
+
+            services.AddScoped<ISubAboutService, SubAboutManager>();
+            services.AddScoped<ISubAboutDal, EfSubAboutDal>();
+
+            services.AddScoped<ITestimonialService, TestimonialManager>();
+            services.AddScoped<ITestimonialDal, EfTestimonialDal>();
 
             services.AddScoped<IAccountService, AccountManager>();
             services.AddScoped<IAccountDal, EfAccountDal>();
