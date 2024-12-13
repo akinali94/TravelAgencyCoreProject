@@ -15,7 +15,3 @@ Asp.NET Core, Entity Framework, LinQ, N-Tier Architecture, CQRS Design Pattern, 
 Fluent Validation, Auto Mapper, DI (Dependency Injection), DTO (Data Transfer Object), Identity, Role-based authentication,
 Login, Register, Ajax, API, API Consume, Reporting, Dashboard, Password Reset, Email Activation, Rapid API, MediatR,
 Publish, Deploy
-
-
-# Live Link
-https://aliakintraversal.azurewebsites.net
